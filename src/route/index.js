@@ -828,11 +828,10 @@ router.get('/template-5', function (req, res) {
 
 // ================================================================
 
-// ================================================================
-
 // router.get Створює нам один ентпоїнт
 
 //           ↙ тут вводимо шлях (PATH) до сторінки
+
 router.get('/template-6', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -842,6 +841,18 @@ router.get('/template-6', function (req, res) {
     page: {
       title: 'Example Page',
     },
+
+router.get('/template-4', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('template-4', {
+    layout: 'template-4',
+    page: {
+      title: 'Example Page',
+    },
+
+
     header: [
       {
         text: 'Features',
@@ -856,6 +867,7 @@ router.get('/template-6', function (req, res) {
         url: 'https://example.com/services',
       },
     ],
+
     info: {
       title: 'Vertically centered hero sign-up form',
       description:
@@ -928,6 +940,59 @@ router.get('/template-6', function (req, res) {
         },
       ],
     },
+
+
+    main: {
+      heading: 'Oh yeah, it’s that good. See for yourself.',
+      descriotion:
+        'Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.',
+      image: 'https://picsum.photos/500/500',
+      button: 'View details',
+      href: 'https://example.com/',
+    },
+
+    featured: [
+      {
+        heading: 'Featured title',
+        info: "Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.",
+        linkText: 'Call to action',
+        linkUrl: 'https://example.com/',
+        photo: 'https://picsum.photos/64/64',
+      },
+      {
+        heading: 'Featured title',
+        info: 'This is a wider card with supporting text below as a natural lead-in to additional content',
+        linkText: 'Call to action',
+        linkUrl: 'https://example.com/',
+        photo: 'https://picsum.photos/64/64',
+      },
+      {
+        heading: 'Featured title',
+        info: 'This is a wider card with supporting text below as a natural lead-in to additional content',
+        linkText: 'Call to action',
+        linkUrl: 'https://example.com/',
+        photo: 'https://picsum.photos/64/64',
+      },
+    ],
+
+    actions: [
+      {
+        heading: 'Checkout form',
+        text: 'Checkout',
+        url: 'https://example.com/',
+      },
+      {
+        heading: 'Login form',
+        text: 'Login',
+        url: 'https://example.com/',
+      },
+      {
+        heading: 'Sign up form',
+        text: 'Sign up',
+        url: 'https://example.com/',
+      },
+    ],
+
     footer: [
       {
         title: 'Features',
@@ -991,5 +1056,14 @@ router.get('/template-6', function (req, res) {
     ],
   })
 })
+
+
+
+// ================================================================
+
+// ================================================================
+
+
+
 // Підключаємо роутер до бек-енду
 module.exports = router
