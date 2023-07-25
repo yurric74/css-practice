@@ -1,0 +1,36 @@
+{{! 
+    Цей код містить лише те, що буде виводитись в <body>
+    Адже наш layout/default.hbs має вже структуру HTML
+}}
+  {{> headerDark}}
+
+{{!==============hero=====================!}}
+{{#with hero}}
+  <div class='hero'>
+    <h1 class='hero_title'>{{title}}</h1>
+    <div class='hero_text'>{{description}}</div>
+    {{#with button}}
+      <a href='{{url}}' class='hero_btn'>{{text}}</a>
+    {{/with}}
+  </div>
+{{/with}}
+
+{{!==============hero=====================!}}
+
+{{!=============about======================!}}
+
+{{#with about}}
+  <div class='about'>
+    <h1>{{heading}}</h1>
+    <p>{{info}}</p>
+  </div>
+{{/with}}
+
+{{!=============about======================!}}
+
+{{!=============articles======================!}}
+
+  {{>  articleCardDark}}
+
+{{!==============articles=====================!}}
+  {{> footerDark}}
