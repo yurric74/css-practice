@@ -992,6 +992,7 @@ router.get('/template-7', function (req, res) {
   // res.render генерує нам HTML сторінку
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('template-7', {
     layout: 'template-7',
@@ -1007,11 +1008,19 @@ router.get('/template-6', function (req, res) {
   res.render('template-6', {
     layout: 'template-6',
 >>>>>>> 649c0a66f7668ec1c86b5ec4a21ffc6aec02c028
+=======
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('template-7', {
+    layout: 'template-7',
+>>>>>>> 0b922bb5d1b09c4607d402cc39acf6253f670da4
     page: {
       title: 'Example Page',
     },
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 0b922bb5d1b09c4607d402cc39acf6253f670da4
     header: {
       brandName: 'Logo',
       userOnline: 10,
@@ -1105,7 +1114,16 @@ router.get('/template-6', function (req, res) {
     },
   })
 })
+<<<<<<< HEAD
 =======
+=======
+
+// router.get Створює нам один ентпоїнт
+
+//           ↙ тут вводимо шлях (PATH) до сторінки
+
+
+>>>>>>> 0b922bb5d1b09c4607d402cc39acf6253f670da4
 router.get('/template-4', function (req, res) {
   // res.render генерує нам HTML сторінку
 
@@ -1329,6 +1347,10 @@ router.get('/template-4', function (req, res) {
 
 
 
+<<<<<<< HEAD
 >>>>>>> 649c0a66f7668ec1c86b5ec4a21ffc6aec02c028
+=======
+
+>>>>>>> 0b922bb5d1b09c4607d402cc39acf6253f670da4
 // Підключаємо роутер до бек-енду
 module.exports = router
