@@ -2,12 +2,12 @@
     Цей код містить лише те, що буде виводитись в <body>
     Адже наш layout/default.hbs має вже структуру HTML
 }}
- <header class='header'>
-{{#with header}}
- 
+<header class='header'>
+  {{#with header}}
+
     <div class='header_log'>
-      <div class="head_log">
-      <div class='logo'>{{brandName}}</div>
+      <div class='head_log'>
+        <div class='logo'>{{brandName}}</div>
       </div>
       <div class='header_links'>
         {{#each links}}
@@ -25,33 +25,30 @@
       <p class='dop_txt'>UserOnline: {{userOnline}}</p>
     </div>
 
-  </header>
-{{/with}}
-  </header>
+  {{/with}}
+</header>
 
 {{!==============hero=====================!}}
 {{#with hero}}
-<div class="hero">
-  <h1 class="hero_title">{{title}}</h1>
-  <div class="hero_text">{{description}}</div>
-  {{#with button}}
-    <a href="{{url}}" class="hero_btn">{{text}}</a>
-  {{/with}}
-</div>
+  <div class='hero'>
+    <h1 class='hero_title'>{{title}}</h1>
+    <div class='hero_text'>{{description}}</div>
+    {{#with button}}
+      <a href='{{url}}' class='hero_btn'>{{text}}</a>
+    {{/with}}
+  </div>
 {{/with}}
 
 {{!==============hero=====================!}}
 
-  
 {{!=============about======================!}}
 
-  {{#with about}}
-    <div class="about">
-      <h1>{{heading}}</h1>
-      <p>{{info}}</p>
-    </div>
-  {{/with}}
-
+{{#with about}}
+  <div class='about'>
+    <h1>{{heading}}</h1>
+    <p>{{info}}</p>
+  </div>
+{{/with}}
 
 {{!=============about======================!}}
 
@@ -59,24 +56,18 @@
 
 <main class='main'>
   <h1>Our Articles</h1>
-  <div class="articles">
-  {{#each articles}}
-    <div class="main_content">
-    <img src="{{photo}}" class="img">
-    <h3>{{name}}</h3>
-    <p>{{description}}</p>
-    <button class="main_btn">Read All</button>
-    </div>
-  {{/each}}
+  <div class='articles'>
+    {{#each articles}}
+      <div class='main_content'>
+        <img src='{{photo}}' class='img' />
+        <h3>{{name}}</h3>
+        <p>{{description}}</p>
+        <button class='main_btn'>Read All</button>
+      </div>
+    {{/each}}
   </div>
 
 </main>
-
-
-
-
-
-
 
 {{!==============articles=====================!}}
 <footer class='footer'>
@@ -88,7 +79,7 @@
         </div>
       {{/each}}
     </div>
-      <div>{{copyright}}</div>
-    
+    <div>{{copyright}}</div>
+
   {{/with}}
 </footer>
