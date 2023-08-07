@@ -69,6 +69,8 @@
     }
     .header {
         display: flex;
+        grid-template-columns: 1, 1fr;
+        grid-template-rows: 1, 1fr;
     }
     .image {
         display: flex;
@@ -274,7 +276,8 @@
   
     .header__content {
         display: flex;
-        
+        grid-template-columns: 3, 1fr;
+        grid-template-rows: 1, 1fr;
         align-items: center;
         justify-content: space-between;
     }
@@ -323,14 +326,10 @@
   
     .analitic__block {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: 3, 1fr;
         grid-template-rows: 1fr 1fr;
     }
-    .checkout__block {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 1fr 1fr;
-    }
+    
     .analitic__button {
         height: 44px;
         width: 44px;
@@ -351,24 +350,32 @@
         top: 0;
         left: calc(100% + var(--spacing-1));
     }
-    .purchase__block {
-        width: 76px;
-        height: 68px;
-        padding: 12px 0px 12px 0px;
-        gap: 20px;
+    .checkout__block {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 1fr 1fr;
-        grid-row: 1/3;
+       
+        grid-template-columns: 2, 1fr;
+        grid-template-rows: 1fr ;
     }
-    .payment__block {
-        width: 76px;
-        height: 68px;
+    .purchase__block {
+        width: 1fr 100%;
         padding: 12px 0px 12px 0px;
         gap: 20px;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: 4, 1fr;
         grid-template-rows: 1fr 1fr;
+       
+    }
+ 
+
+   
+    
+    .payment__block {
+        width: 450px;
+        height: 586px;
+        
+        gap: 20px;
+        display: grid;
+       
     }
     .mini {
         display: grid;
@@ -440,9 +447,9 @@
     .vertical--small {
         gap: var(--spacing-2);
     }
-    /*.vertical--big {
+    .vertical--big {
         gap: var(--spacing-5);
-    }*/
+    }
     
     .nav-button--active {
         background: var(--color-primary);
@@ -503,61 +510,62 @@
     padding: 20px 24px 24px 24px;
     }
     }
+
+
+
+
+
 @layer adaptive {
          @media all and (wight <=1260px) {
         .page--dashboard {
             max-width: var(--page-width-big);
         }
 
+        .header {
+        
+            grid-template-columns: repeat(auto-fit, minmax(1260px, 1fr));
+        }
         }
         @media all and (1000px <= width <1260px) {
             .page--dashboard {
                  max-width: var(--page-width-medium);
-               
             }
-            .aside {
-               max-width: var(--page-width-medium);
-            }
-            .header {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(1260px, 1fr));
-            }
-            .analitic__block {
-                display: grid;
-                grid-template-columns: repeat(4,  1fr);
-                grid-template-rows: repeat(2, 1fr);
-            }
-            .checkout__block {
-                display: grid;
-                grid-template-columns: repeat(1,  1fr);
-                grid-template-rows: 1fr 1fr;
-            }
+           .header {
+               display: grid;
+               grid-template-columns: 1, minmax(1000px, 1fr);
+           }
+           .analitic__block {
+              display: grid;
+               grid-template-columns: 2,  1fr;
+               grid-template-rows: 2, 1fr;
+           }
+           .checkout__block {
+               display: grid;
+               grid-template-columns: 2,  1fr;
+               grid-template-rows: 1,  1fr;
+           }
         }
         @media all and (wight < 1000px) {
-            .page--dashboard {
-               
-                max-width: var(--page-width-small);
-            }
             .aside {
                 display: none;
             }
             .header {
-                grid-template-columns: repeat(auto-fit, minmax(1000px, 1fr));
+                display: grid;
+                grid-template-columns: 1, 1fr;
+                grid-template-rows: 2, 1fr;
             }
+            .relative {
+                grid-template-columns: 1, 1fr;
+                grid-template-rows: 1, 1fr;
+                bottom: 80px;
+                
+            }
+        
             .analitic__block {
                 display: grid;
-                grid-template-columns: repeat(1,  1fr);
-                grid-template-rows: 1fr 1fr;
+                grid-template-columns: 1, 1fr;
+                grid-template-rows: 4, 1fr;
             }
-            .purchase {
-                display: grid;
-                grid-template-columns: repeat(1,  1fr);
-                grid-template-rows:  1fr;
-            }
-            .payment {
-                display: grid;
-                grid-template-columns: repeat(1,  1fr);
-                grid-template-rows:  1fr;
-            }
+        }
     }
-}
+
